@@ -19,21 +19,21 @@
 
         
         <div>
-          <input type="number" min=8 max=128 />Minimum number of characters</input> 
-          <input type="checkbox" name="lowercase">Include lowercase letters</input>
-          <input type="checkbox" name="uppercase">Include uppercase letters</input>
-          <input type="checkbox" name="numbers">Include numbers</input>
-          <input type="checkbox">Include special characters</input>
+          <input id="length" type="number" min=8 max=128 />Number of characters</input> 
+          <input id = "lowercase" type="checkbox" name="lowercase">Include lowercase letters</input>
+          <input id = "uppercase" type="checkbox" name="uppercase">Include uppercase letters</input>
+          <input id="numbers" type="checkbox" name="numbers">Include numbers</input>
+          <input id="symbols" type="checkbox">Include special characters</input>
         </div>
 
       
 
-        <div class="card-body">
+        <div id="clipboard" class="card-body">
           <textarea
             readonly
             id="password"
             placeholder="Your Secure Password"
-            aria-label="Generated Password"
+            aria-label="Generated Password" 
           ></textarea>
         </div>
         <div class="card-footer">
@@ -44,3 +44,5 @@
     <script src="/Develop/script.js"></script>
   </body>
 </html>
+
+
