@@ -19,16 +19,19 @@
 
         
         <div>
-          <input id="length" type="number" min=8 max=128 />Number of characters</input> 
-          <input id = "lowercase" type="checkbox" name="lowercase">Include lowercase letters</input>
-          <input id = "uppercase" type="checkbox" name="uppercase">Include uppercase letters</input>
-          <input id="numbers" type="checkbox" name="numbers">Include numbers</input>
-          <input id="symbols" type="checkbox">Include special characters</input>
+          <ul class="no-bullets">
+          <li><input id="length" type="number" min="8" max="128" />Number of characters</input></li>
+          <li><input id = "lowercase" type="checkbox" name="lowercase">Include lowercase letters</input></li>
+          <li><input id = "uppercase" type="checkbox" name="uppercase">Include uppercase letters</input></li>
+          <li><input id="numbers" type="checkbox" name="numbers">Include numbers</input></li>
+          <li><input id="symbols" type="checkbox">Include special characters</input></li>
+          </ul>
+          
         </div>
 
       
 
-        <div id="clipboard" class="card-body">
+        <div class="card-body">
           <textarea
             readonly
             id="password"

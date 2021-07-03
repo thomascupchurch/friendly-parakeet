@@ -1,5 +1,5 @@
 
-// define variables
+// define variables and connect to Ids
 const resultEl = document.getElementById('password');
 const lengthEl = document.getElementById('length');
 const uppercaseEl = document.getElementById('uppercase');
@@ -7,9 +7,9 @@ const lowercaseEl = document.getElementById('lowercase');
 const numbersEl = document.getElementById('numbers');
 const symbolsEl = document.getElementById('symbols');
 const generateEl = document.getElementById('generate');
-// const clipboardEl = document.getElementById('clipboard');
 
-// create master function
+
+// create master randomizer function 
 const randomFunction = {
   lower: getRandomLower,
   upper: getRandomUpper,
@@ -28,6 +28,8 @@ function generatePassword(lower, upper, number, symbol, length) {
 
   console.log('typesCount: ', typesCount);
   // convert list of types to an array and filter out those that are not checked
+
+
   const typesArr = [{ lower }, { upper }, { number }, { symbol }].filter
   (
     item => Object.values(item)[0]
@@ -36,6 +38,17 @@ function generatePassword(lower, upper, number, symbol, length) {
   console.log('typesArr: ', typesArr);
 
   if (typesCount === 0) {
+    alert("Please choose at least one type of character.");
+    return '';
+  }
+
+  if (lengthEl.value < 8) {
+    alert("Please enter a number of characters from 8 through 128");
+    return '';
+  }
+
+  if (lengthEl.value > 128) {
+    alert("Please enter a number of characters from 8 through 128");
     return '';
   }
 
@@ -55,8 +68,6 @@ function generatePassword(lower, upper, number, symbol, length) {
 };
 
 
-
-
 // generate event listener
 generateEl.addEventListener('click', () => {
   const length = +lengthEl.value;
@@ -74,34 +85,14 @@ generateEl.addEventListener('click', () => {
     );
 });
 
-// copy password to clipboard
-
-
-// clipboardEl.addEventListener('click', () => {
-//   const textarea = document.createElement('textarea');
-//   const password = resultEl.innerText;
-
-//   if(!password) {
-//     return;
-//   }
-
-//   textarea.value = password;
-//   dosument.body.appendChild(textarea);
-//   textarea.select();
-//   document.execCommand('copy');
-//   textarea.remove();
-//   alert("Password copied to clipboard");
-// });
-
+// functions for individual categories of characters
 function getRandomLower() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
 
-
 function getRandomUpper() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
-
 
 function getRandomNumber() {
   return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
