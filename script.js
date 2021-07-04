@@ -68,7 +68,6 @@ const randomFunction = {
 };
 
 
-
 // functions for individual categories of characters
 function getRandomLower() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
