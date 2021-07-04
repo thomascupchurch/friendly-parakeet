@@ -10,5 +10,5 @@
 
 
 ```md
-![alt text][assets/pictures/Screen Shot 2021-07-04 at 4.22.13 PM.png]
+![password generator screenshot](assets/pictures/Screen Shot 2021-07-04 at 4.22.13 PM.png)
 ```
