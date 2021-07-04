@@ -6,9 +6,9 @@
 
 ## Prompts user to choose each desired character type
 
-## Returns a random string of the user's chosen character types, in the lenght the user chose
+## Returns a random string of the user's chosen character types, in the length the user chose
 
 
 ```md
-![password generator screenshot](assets/pictures/Screen Shot 2021-07-04 at 4.22.13 PM.png)
+![password generator screenshot](assets/pictures/screenshot.png)
 ```
