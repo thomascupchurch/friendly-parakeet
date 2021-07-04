@@ -9,7 +9,8 @@
 ## Returns a random string of the user's chosen character types, in the length the user chose
 
 
-deployed URL: https://thomascupchurch.github.io/friendly-parakeet/
+![deployed URL](https://thomascupchurch.github.io/friendly-parakeet/)
+
 
 ```md
 ![password generator screenshot](assets/pictures/screenshot.png)
